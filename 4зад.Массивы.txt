@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("введите вашу оценку от 2 до 5");
+            string text = Console.ReadLine();
+            if (text.Contains("2"))
+            {
+                Console.WriteLine("Ну что, студент, пора долг Родине отдать"); return;
+            }
+            else if(text.Contains("3"))
+            {
+                Console.WriteLine("Прощай стипендия!"); return;
+            }
+            else if (text.Contains("4"))
+            {
+                Console.WriteLine("Живи пока, через полгода увидимся"); return;
+            }
+            else if(text.Contains("5"))
+            {
+                Console.WriteLine("О, отличник появился! На олимпиаду пойдешь");
+            }
+        }
+    }
+} 

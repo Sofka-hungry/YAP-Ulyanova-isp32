@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           string a = Console.ReadLine(), b = Console.ReadLine();
+            int n = 0;
+            for(int i = 0; i < a.Length; i++)
+            {
+                if (a[i] == b[i]) { n++; }
+            }
+            Console.WriteLine("Совпадение {0} элементов", n);
+        }
+    }
+} 
