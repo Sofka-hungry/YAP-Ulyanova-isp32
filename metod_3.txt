@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Методы_второе
+{
+    class Program
+    {
+        public static double[] GetCubes(int nachalo, int konechnoe)
+        {
+            double[] massiv = new double[konechnoe - nachalo + 1];
+            for (int index = 0; index != massiv.Length; index++, nachalo++)
+            {
+                massiv[index] = Math.Pow(nachalo, 3);
+            }
+            return massiv;
+        }
+        public static void PrintSum(double[] massiv)
+        {
+            double summa = 0;
+            for (int index = 0; index != massiv.Length; index++)
+            {
+                summa += massiv[index];
+            }
+            Console.WriteLine(summa);
+        }
+        public static void Main()
+        {
+            int startValue = int.Parse(Console.ReadLine());
+            int endValue = int.Parse(Console.ReadLine());
+            PrintSum(GetCubes(startValue, endValue));
+        }
+    }
+}
