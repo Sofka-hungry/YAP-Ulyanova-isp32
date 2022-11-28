@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System;
+
+namespace metod_1
+{
+    class Program
+    {
+        public static string proverka_texta(string slovo)
+        {
+            for (int i = 0; i != slovo.Length; i++)
+            {
+                if (slovo[i] == 'e')
+                {
+                    return ("в тексте есть латинские буквы");
+                }
+            }
+            return ("в тексте нет латинских букв");
+        }
+        static void Main()
+        {
+            Console.Write("введи текст: ");
+            string  itog = Console.ReadLine();
+            Console.WriteLine(proverka_texta(itog));
+        }
+    }
+}
