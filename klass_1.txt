@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace klass_1
+{
+
+    public class Dannie
+    {
+        public int rate, days;
+        public string name, surname;
+        public void GetFullName()
+        {
+            Console.WriteLine($"ФИ сотрудника: {name} {surname}");
+        }
+        public void GetSalary()
+        {
+            Console.WriteLine($"Зарплата: {rate * days}");
+        }
+    }
+    class Program
+    {
+        static void Main()
+        {
+            Dannie itog = new Dannie();
+            Console.Write("Name: "); itog.name = Console.ReadLine();
+            Console.Write("Surname: "); itog.surname = Console.ReadLine();
+            Console.Write("Rate: "); itog.rate = int.Parse(Console.ReadLine());
+            Console.Write("Days: "); itog.days = int.Parse(Console.ReadLine());
+
+            itog.GetFullName();
+            itog.GetSalary();
+        }
+    }
+}
