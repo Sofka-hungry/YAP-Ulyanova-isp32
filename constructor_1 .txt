@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace constructor_1
+{
+        class Watch
+        {
+            public Watch(string firma, string nazvanie, decimal stoimosti)
+            {
+                _firma = firma;
+                _nazvanie = nazvanie;
+                _stoimosti = stoimosti;
+            }
+
+        private string _firma;
+        private string _nazvanie;      
+        private decimal _stoimosti;
+
+            public void Print()
+            {
+                Console.WriteLine($"firma: {_firma}");
+                Console.WriteLine($"nazvanie: {_nazvanie}");
+                Console.WriteLine($"stoimosti: {_stoimosti} М");
+            }
+        }
+    class Program
+    {
+        public static void Main()
+        {
+            var myWatch = new Watch("Casio", "electronic", 15.99M);      
+            myWatch.Print();
+        }
+    }
+}
